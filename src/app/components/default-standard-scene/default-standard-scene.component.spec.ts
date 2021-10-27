@@ -11,7 +11,7 @@ describe('DefaultStandardSceneComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [ DefaultStandardSceneComponent ],
-      imports: [TranslateModule.forRoot(), MatDialogModule]
+      imports: [TranslateModule.forRoot(), MatDialogModule, RouterTestingModule]
     })
     .compileComponents();
   }));
