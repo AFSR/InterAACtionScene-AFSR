@@ -2,10 +2,10 @@ import { Component, OnInit } from '@angular/core';
 import {SettingsService} from '../../services/settings.service';
 import {LanguageService} from '../../services/language.service';
 import {Router} from "@angular/router";
+import {ScenesService} from "../../services/scenes.service";
 import {MatDialog} from "@angular/material/dialog";
 import {AddSceneDialogComponent} from "../add-scene-dialog/add-scene-dialog.component";
 import {DisplaySiteASFRComponent} from "../display-site-asfr/display-site-asfr.component";
-import { ScenesService } from 'src/app/services/scenes.service';
 
 @Component({
   selector: 'app-settings',
@@ -15,6 +15,7 @@ import { ScenesService } from 'src/app/services/scenes.service';
 export class SettingsComponent implements OnInit {
 
   constructor(public settingsService: SettingsService,
+              public scenesService: ScenesService,
               public languageService: LanguageService,
               private dialog: MatDialog,
               public router: Router,
@@ -36,6 +37,10 @@ export class SettingsComponent implements OnInit {
     return 'url(assets/images/'+ s +'.png)';
   }
 
+  saveConfig() {
+    setTimeout(() => this.scenesService.updateConfig(),50);
+  }
+  
   openDialogASFR() {
     this.dialog.open(DisplaySiteASFRComponent,{
       height: '90%',

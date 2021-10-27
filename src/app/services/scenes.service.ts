@@ -466,4 +466,26 @@ export class ScenesService {
       this.createConfigurationObject(db, transaction);
     };
   }
+
+  updateConfig() {
+    this.openRequest = indexedDB.open('SaveVisualSceneDisplay', 3);
+
+    // ERROR
+    this.openRequest.onerror = event => {
+      alert('Database error: ' + event.target.errorCode);
+    };
+
+    // SUCCESS
+    this.openRequest.onsuccess = event => {
+      const db = event.target.result;
+
+      // UPDATE THE GRID
+      const configurationStore = db.transaction(['Configuration'], 'readwrite');
+      const configurationObjectStore = configurationStore.objectStore('Configuration');
+      const storeConfigurationRequest = configurationObjectStore.get(this.userDBService.currentUser);
+      storeConfigurationRequest.onsuccess = () => {
+        configurationObjectStore.put(this.settingsService.getConfiguration(), this.userDBService.currentUser);
+      };
+    };
+  }
 }
