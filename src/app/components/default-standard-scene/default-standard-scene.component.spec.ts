@@ -3,6 +3,7 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { DefaultStandardSceneComponent } from './default-standard-scene.component';
 import {TranslateModule} from '@ngx-translate/core';
 import {MatDialogModule} from '@angular/material/dialog';
+import {RouterTestingModule} from '@angular/router/testing';
 
 describe('DefaultStandardSceneComponent', () => {
   let component: DefaultStandardSceneComponent;
@@ -11,7 +12,7 @@ describe('DefaultStandardSceneComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [ DefaultStandardSceneComponent ],
-      imports: [TranslateModule.forRoot(), MatDialogModule]
+      imports: [TranslateModule.forRoot(), MatDialogModule, RouterTestingModule]
     })
     .compileComponents();
   }));
