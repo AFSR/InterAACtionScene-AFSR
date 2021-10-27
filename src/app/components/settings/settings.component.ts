@@ -18,8 +18,7 @@ export class SettingsComponent implements OnInit {
               public scenesService: ScenesService,
               public languageService: LanguageService,
               private dialog: MatDialog,
-              public router: Router,
-              public scenesService: ScenesService) { }
+              public router: Router) { }
 
   ngOnInit(): void {
     let lang = location.href.substring(24,26);
