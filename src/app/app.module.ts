@@ -35,6 +35,7 @@ import { DialogTutorialComponent } from './components/dialog-tutorial/dialog-tut
 import { LogoutAppComponent } from './components/logoutApp/logout-app.component';
 import { DisplaySiteASFRComponent } from './components/display-site-asfr/display-site-asfr.component';
 import { LoadingUserComponent } from './components/loading-user/loading-user.component';
+import { DialogLinkInteraactionboxComponent } from './components/dialog-link-interaactionbox/dialog-link-interaactionbox.component';
 
 export function createTranslateLoader(http: HttpClient) {
   return new TranslateHttpLoader(http, '/assets/i18n/', '.json');
@@ -63,6 +64,7 @@ export function createTranslateLoader(http: HttpClient) {
     LogoutAppComponent,
     DisplaySiteASFRComponent,
     LoadingUserComponent,
+    DialogLinkInteraactionboxComponent,
   ],
     imports: [
       TranslateModule.forRoot({
