@@ -112,8 +112,8 @@
 }
 
 #hideShowButton {
-  height: 1cm;
-  width: 1cm;
+  height: 2.5cm;
+  width: 2.5cm;
   min-width: 0.5cm;
   min-height: 0.5cm;
   /* text-align: center; */
@@ -129,13 +129,13 @@
 }
 
 #fullScreenButton {
-  height: 1cm;
-  width: 1cm;
+  height: 2.5cm;
+  width: 2.5cm;
   min-width: 0.5cm;
   min-height: 0.5cm;
   position: absolute;
   right: 0;
-  margin-top: calc(5px + 1cm);
+  margin-top: calc(5px + 2.5cm);
   /* font-size: 1.5em; */
   text-align: center;
   border-radius: 5px;
@@ -145,13 +145,13 @@
 }
 
 #logout {
-  height: 1cm;
-  width: 1cm;
+  height: 2.5cm;
+  width: 2.5cm;
   min-width: 0.5cm;
   min-height: 0.5cm;
   position: absolute;
   right: 0;
-  margin-top: calc(5px + 2cm);
+  margin-top: calc(5px + 5cm);
   /* font-size: 1.5em; */
   text-align: center;
   border-radius: 5px;
@@ -161,8 +161,8 @@
 }
 
 .buttonimg {
-  height: 0.7cm;
-  width: 0.7cm;
+  height: 1cm;
+  width: 1cm;
   min-width: 0.4cm;
   min-height: 0.4cm;
   margin: -5px -5px;
