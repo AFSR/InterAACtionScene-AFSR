@@ -7,7 +7,7 @@ import {AudioRecorderService} from "../../services/audio-recorder.service";
 import {LanguageService} from "../../services/language.service";
 import {MatDialog} from "@angular/material/dialog";
 import {LogoutAppComponent} from "../logoutApp/logout-app.component";
-import {saveAs as importedSaveAs} from 'file-saver';
+import {DialogTutorialComponent} from '../dialog-tutorial/dialog-tutorial.component';
 
 @Component({
   selector: 'app-menubar',
@@ -101,7 +101,6 @@ export class MenubarComponent implements OnInit {
 
   constructor(public modeService: ModeService,
               public scenesService: ScenesService,
-              public audioRecorderService: AudioRecorderService,
               public sceneDisplayService: SceneDisplayService,
               public languageService: LanguageService,
               private dialog: MatDialog) {
@@ -111,6 +110,13 @@ export class MenubarComponent implements OnInit {
     let lang = location.href.substring(24,26);
     this.languageService.switchLanguage(lang);
     this.scenesService.loadUserOfUsersList(localStorage.getItem('logged'));
+  }
+
+  openDialogTuto(): void{
+    this.dialog.open(DialogTutorialComponent, {
+      height: '75%',
+      width: '75%'
+    });
   }
 
 }

@@ -159,7 +159,8 @@
     "Hide/Showtooldbar": "Hide/Show toolbar",
     "Youcanhideorshorwthetoolbar": "You can hide or show the toolbar with the triangle-shaped button pointing up (to hide) or down (to display).",
     "Fullscreen": "Full screen",
-    "Youcanputorexit": "You can put or exit full screen with the square button."
+    "Youcanputorexit": "You can put or exit full screen with the square button.",
+    "Tuto": "Tutorial"
   },
   "Hotspot": {
     "Createhotspot": "Create hotspot",
