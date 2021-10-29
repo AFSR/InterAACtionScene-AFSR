@@ -1,5 +1,6 @@
 import {Component, Inject, OnInit} from '@angular/core';
 import {MAT_DIALOG_DATA, MatDialogRef} from "@angular/material/dialog";
+import {saveAs as importedSaveAs} from 'file-saver';
 
 @Component({
   selector: 'app-logout-app',
@@ -17,5 +18,10 @@ export class LogoutAppComponent implements OnInit {
 
   onNoClick(): void {
     this.dialogRef.close();
+  }
+
+  putYes(){
+    const blob = new Blob([""], {type: 'text/txt'});
+    importedSaveAs(blob, 'close161918.txt');
   }
 }
