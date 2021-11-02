@@ -162,7 +162,8 @@
     "Hide/Showtooldbar": "Cacher/Afficher la barre de menu",
     "Youcanhideorshorwthetoolbar": "On peut cacher ou afficher la barre de menu avec le bouton en forme de triangle pointant vers le haut (pour cacher) ou vers le bas (pour afficher), en dessous du bouton “Settings”.",
     "Fullscreen": "Plein écran",
-    "Youcanputorexit": "On peut entrer ou sortir du mode plein écran avec le bouton en forme de carré sous le bouton pour afficher/cacher la barre de menu."
+    "Youcanputorexit": "On peut entrer ou sortir du mode plein écran avec le bouton en forme de carré sous le bouton pour afficher/cacher la barre de menu.",
+    "Tuto": "Tutoriel"
   },
   "Hotspot": {
     "Createhotspot": "Créer hotspot",
