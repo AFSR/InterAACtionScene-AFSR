@@ -1,6 +1,4 @@
 {
-  "$schema": "http://json-schema.org/schema#",
-  "$id": "saveSchema.json",
   "type": "array",
   "items": {
     "type": "object",
