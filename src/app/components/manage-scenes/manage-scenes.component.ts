@@ -89,12 +89,12 @@ export class ManageScenesComponent implements OnInit {
     const SCENESjson = JSON.stringify(this.scenesService.getScenes());
     const file = new Blob([SCENESjson], {type: 'text/json'});
     if (window.navigator.msSaveOrOpenBlob) { // IE10+
-      window.navigator.msSaveOrOpenBlob(file, 'scenes.json');
+      window.navigator.msSaveOrOpenBlob(file, 'scenes.AACPlayer');
     } else { // Others
       const a = document.createElement('a');
       const url = URL.createObjectURL(file);
       a.href = url;
-      a.download = 'scenes.json';
+      a.download = 'scenes.AACPlayer';
       document.body.appendChild(a);
       a.click();
       setTimeout(() => {
