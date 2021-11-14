@@ -10,10 +10,10 @@ const app = express();
 
 app.use(requireHTTPS);
 
-app.use(express.static('./dist/visual-scene-display'));
+app.use(express.static('./dist/InterAACtionScene'));
 
 app.get('/*', function(req, res) {
-  res.sendFile('index.html', {root: 'dist/visual-scene-display/'}
+  res.sendFile('index.html', {root: 'dist/InterAACtionScene/'}
 );
 });
 
