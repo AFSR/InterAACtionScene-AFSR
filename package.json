@@ -1,5 +1,5 @@
 {
-  "name": "InterAACtionScene",
+  "name": "visual-scene-display",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
