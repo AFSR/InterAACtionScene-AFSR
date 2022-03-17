@@ -3,6 +3,10 @@ import {ScenesService} from '../../services/scenes.service';
 import {LanguageService} from '../../services/language.service';
 import {MatDialog} from '@angular/material/dialog';
 import {DialogTutorialComponent} from '../dialog-tutorial/dialog-tutorial.component';
+import {Scene} from '../../types';
+import {JsonValidatorService} from '../../services/json-validator.service';
+import {Observable} from 'rxjs';
+import {HttpClient, HttpClientModule} from '@angular/common/http';
 
 @Component({
   selector: 'app-default-standard-scene',
@@ -13,7 +17,9 @@ export class DefaultStandardSceneComponent implements OnInit {
 
   constructor(public scenesService: ScenesService,
               public languageService: LanguageService,
-              public dialog: MatDialog) { }
+              public dialog: MatDialog,
+              private jsonValidatorService: JsonValidatorService,
+              private http: HttpClient) { }
 
   ngOnInit(): void {
     this.delay(50).then(r => {
@@ -23,9 +29,19 @@ export class DefaultStandardSceneComponent implements OnInit {
       }
     });
   }
+
+  public getJSON(): Observable<any> {
+    return this.http.get<any>("/assets/share/farm.scene");
+  }
+
   defaultScene(){
-    const image = 'assets/images/example.jpg';
-    this.scenesService.addScene(image, 'Example Scene', 'Example Image');
+    this.getJSON().subscribe(data => {
+      const scenes = data;
+      if (scenes as Array<Scene>) {
+        this.scenesService.SCENES = scenes;
+        this.scenesService.updateScenes();
+      }
+    });
   }
 
   openDialog(): void{
