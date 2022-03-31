@@ -28,8 +28,7 @@
   <div class="bigContainer">
     <div class="settings-item">
       <label for="dwellTimeEnable">{{'Settings.DwelltimeEnabled' | translate}}:</label>
-      <input [(ngModel)]="this.settingsService.DWELL_TIME_ENABLED" (change)="saveConfig()" id="dwellTimeEnable" type="checkbox"
-      >
+      <input [(ngModel)]="this.settingsService.DWELL_TIME_ENABLED" (change)="saveConfig()" id="dwellTimeEnable" type="checkbox" checked>
     </div>
     <div class="settings-item">
       <label for="dwellTime">{{'Settings.DwellTime' | translate}}:</label>
