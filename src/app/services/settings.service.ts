@@ -7,7 +7,7 @@ import {Configuration} from "../types";
 
 export class SettingsService {
 
-  DWELL_TIME_ENABLED = false;
+  DWELL_TIME_ENABLED = true;
   DWELL_TIME_TIMEOUT_VALUE = 2000;
 
   constructor() {
