@@ -6,7 +6,7 @@ import {DialogTutorialComponent} from '../dialog-tutorial/dialog-tutorial.compon
 import {Scene} from '../../types';
 import {JsonValidatorService} from '../../services/json-validator.service';
 import {Observable} from 'rxjs';
-import {HttpClient, HttpClientModule} from '@angular/common/http';
+import {HttpClient} from '@angular/common/http';
 
 @Component({
   selector: 'app-default-standard-scene',
