@@ -27,7 +27,9 @@ jobs:
 
       - name: Tar gz
         run: |
-          tar -czvf InterAACtionScene.tar.gz ./dist/InterAACtionScene
+          cd ./dist/InterAACtionScene
+          tar -czvf InterAACtionScene.tar.gz *
+          mv InterAACtionScene.tar.gz ../../
 
       - name: New tag
         id: new-tag
