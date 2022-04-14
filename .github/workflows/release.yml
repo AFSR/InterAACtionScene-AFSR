@@ -27,9 +27,9 @@ jobs:
 
       - name: Tar gz
         run: |
-          cd ./dist/InterAACtionScene
+          cd ./dist/
           tar -czvf InterAACtionScene.tar.gz *
-          mv InterAACtionScene.tar.gz ../../
+          mv InterAACtionScene.tar.gz ../
 
       - name: Get Env
         run: |
